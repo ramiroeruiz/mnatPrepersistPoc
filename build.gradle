@@ -71,7 +71,13 @@ dependencies {
 
     runtimeOnly("org.postgresql:postgresql")
 //    testImplementation("org.testcontainers:testcontainers-bom:1.14.3")
-    testRuntimeOnly("org.testcontainers:postgresql")
+
+// https://mvnrepository.com/artifact/org.testcontainers/postgresql
+    testImplementation 'org.testcontainers:postgresql:1.17.2'
+    testImplementation "org.testcontainers:testcontainers:1.17.2"
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'org.testcontainers:junit-jupiter:1.17.1'
+
 }
 
 
