@@ -7,11 +7,13 @@ import com.mnaut.poc.service.IContactService;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 @Slf4j
 @MicronautTest
+@Testcontainers
 public class ContactCRUDTest {
 
     @Inject

@@ -10,29 +10,17 @@ netty:
 
 datasources:
   default:
-    url: jdbc:tc:postgresql:12:testsiapi
+    url: jdbc:tc:postgresql://localhost/mnatPrepersistPoc
     driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
-    username: siapi
-    password: siapi
-    maxWaitMillis: 5000
-    maxTotal: 30
-    maxIdle: 28
-    minIdle: 1
-    initialSize: 1
-    timeBetweenEvictionRunsMillis: 5000
-    minEvictableIdleTimeMillis: 60000
-    validationQuery: "select reltuples from pg_class where relname='pg_am'"
-    validationInterval: 50000
-    testOnBorrow: true
-    removeAbandoned: true
-    removeAbandonedTimeout: 200
+    username: mnatPrepersistPoc
+    password: mnatPrepersistPoc
 
 jpa:
   default:
     properties:
       hibernate:
         hbm2ddl:
-          auto: validate
+          auto: update
         show_sql: false
 
 logger:
