@@ -66,12 +66,12 @@ dependencies {
     runtimeOnly("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("com.vladmihalcea:hibernate-types-52:2.10.1")
 
-//    //LOGGIN
-//    runtimeOnly("ch.qos.logback:logback-classic")
-
     runtimeOnly("org.postgresql:postgresql")
-//    testImplementation("org.testcontainers:testcontainers-bom:1.14.3")
-    testRuntimeOnly("org.testcontainers:postgresql")
+
+    testImplementation 'org.testcontainers:postgresql:1.17.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'org.testcontainers:junit-jupiter:1.17.1'
+
 }
 
 
